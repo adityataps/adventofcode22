@@ -35,5 +35,5 @@ def part_2():
     return sum(heapq.nlargest(3, heap))
 
 if __name__ == '__main__':
-    print(f'Answer to part 1: {part_1()}')
-    print(f'Answer to part 2: {part_2()}')
+    print(f'Answer to part 1: {part_1()}')  # 74394
+    print(f'Answer to part 2: {part_2()}')  # 212836
