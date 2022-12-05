@@ -18,13 +18,11 @@ def part_1():
 
 
 def part_2():
-
     heap = []
+    curr_sum = 0
 
     with open('./data.csv') as file:
         reader = csv.reader(file)
-
-        curr_sum = 0
         for line in reader:
             if line:
                 curr_sum += int(line[0])

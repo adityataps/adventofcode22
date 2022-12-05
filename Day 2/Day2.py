@@ -1,5 +1,6 @@
 import csv
 
+
 ROCK = 1
 PAPER = 2
 SCISSORS = 3
@@ -22,6 +23,7 @@ you_me_dict = {
     'C': 'X'
 }
 
+
 def part_1():
     curr_score = 0
     with open('data.csv') as file:
@@ -37,6 +39,7 @@ def part_1():
 
     return curr_score
 
+
 outcome_dict_pt_2 = {
     'X': 0,
     'Y': 3,
@@ -49,6 +52,7 @@ outcome_you_dict = {
     'Z': {'A': PAPER, 'B': SCISSORS, 'C': ROCK}
 }
 
+
 def part_2():
     curr_score = 0
     with open('data.csv') as file:
@@ -56,7 +60,6 @@ def part_2():
         for line in reader:
             line = line[0]
             you, me = line[0], line[2]
-
             curr_score += outcome_dict_pt_2[me] + outcome_you_dict[me][you]
 
     return curr_score
